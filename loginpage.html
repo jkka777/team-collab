@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: #be50e8;
+        }
+        form{
+            margin: auto;
+           height: 100px;
+        }
+        div{
+            
+            display: flex;  
+            background-color:#be50e8;
+            padding-top: 50px;
+            color: white;
+            font-size: 30px;
+        }
+        button{
+            color: #000;
+        }
+
+    </style>
 </head>
 <body>
-    login page harii
+    <h1>Login page</h1>
+    <div>
+    <form>
+    
+        <label for="email">Email</label>
+        <input id="useremail" type= "email">
+
+    <label for="Password">Password</label>
+        <input id="userpass" type="password" >
+        <input id="button" type="submit">
+
+</form>
+</div>
 </body>
 </html>
+<script>
+document.querySelector("form").addEventListener("submit",myfuntion)
+
+function myfuntion(){
+    event.preventDefault()
+    let name=document.querySelector("#useremail").value
+    let pass=document.querySelector("#userpass").value
+    alert("sucesfully login")
+}
+
+</script>
